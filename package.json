@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/idk-pixel/discord-tutorials-v13#readme",
   "dependencies": {
+    "discord.js": "^13.6.0",
     "dotenv": "^16.0.0"
   },
   "devDependencies": {
