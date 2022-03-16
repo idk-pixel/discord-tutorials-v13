@@ -1,4 +1,8 @@
 import { setConfig, getConfig } from "../config";
+import { config } from 'dotenv'
 
-setConfig('test', 't1');
-console.log(getConfig('test'))
+config()
+
+// Setting the env!
+
+setConfig('token', process.env.TOKEN);

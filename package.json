@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/idk-pixel/discord-tutorials-v13/issues"
   },
-  "homepage": "https://github.com/idk-pixel/discord-tutorials-v13#readme"
+  "homepage": "https://github.com/idk-pixel/discord-tutorials-v13#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
 }
