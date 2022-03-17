@@ -2,6 +2,7 @@ import { setConfig, getConfig } from "../config";
 import { config } from 'dotenv'
 import { Client } from "./client/Client";
 import { Config } from "./typings/Config";
+import { BitFieldResolvable, IntentsString } from "discord.js";
 
 config()
 
@@ -9,8 +10,8 @@ setConfig('token', process.env.TOKEN);
 
 setConfig('intents', [
     'GUILDS',
-    'GUILD_MESSAGES'
-])
+    'GUILD_MESSAGES',
+]);
 
 const options = {
     token: getConfig('token'),
