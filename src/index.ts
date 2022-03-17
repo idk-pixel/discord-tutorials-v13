@@ -11,7 +11,7 @@ setConfig('token', process.env.TOKEN);
 setConfig('intents', [
     'GUILDS',
     'GUILD_MESSAGES',
-]);
+] as BitFieldResolvable<IntentsString, number>);
 
 const options = {
     token: getConfig('token'),

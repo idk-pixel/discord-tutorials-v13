@@ -9,3 +9,5 @@
 [#2: Set up the ENV for config TS](https://www.youtube.com/watch?v=qHqJpPG-G0s)
 
 [#3: Bot Login Tutorial](https://www.youtube.com/watch?v=H_0l8Zi1dwk)
+
+[#4: Command Handling](https://www.youtube.com/watch?v=E331D_taRNs)
