@@ -5,5 +5,9 @@ export interface Command {
     description: string;
     usage: string;
     aliases: string[];
-    run: (client: Client, message: Message, args: string[]) => Promise<void>;
+    run: (props: {
+        client: Client;
+        message: Message;
+        args: string[];
+    }) => Promise<void>;
 }

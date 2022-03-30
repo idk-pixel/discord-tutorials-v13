@@ -15,15 +15,17 @@ export class Client extends DJSClient {
     }
     private async registerModules() {
         console.log('BOT -> Registering Modules Command')
-        const commandsDirectory = readdirSync(join(__dirname, '../commands')).filter(file => file.endsWith('.ts'));
-
-        for (const file of commandsDirectory) {
-            const command = require(`../commands/${file}`).default as Command;
+        const commandFiles = readdirSync(join(__dirname, '../commands')).filter(file => file.endsWith('.ts'));
+        readdirSync(join(__dirname, '../commands')).filter(f=>f.endsWith('.js')).forEach(f => commandFiles.push(f))
+        for (const file of commandFiles) {
+            const command = require(`../commands/${file}`).default as Command ?? require(`../commands/${file}`) as Command;
 
             this.commands.set(command.name, command);
 
             console.log(`BOT -> Registered Command: ${command.name}`);
         };
+
+        console.log(this.commands)
 
         console.log(`BOT -> Registered ${this.commands.size} Commands`);
     }
