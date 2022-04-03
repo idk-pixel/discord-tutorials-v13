@@ -7,6 +7,7 @@ import { BitFieldResolvable, IntentsString } from "discord.js";
 config()
 
 setConfig('token', process.env.TOKEN);
+setConfig('prefix', '!');
 
 setConfig('intents', [
     'GUILDS',

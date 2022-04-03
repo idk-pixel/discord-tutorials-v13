@@ -21,7 +21,7 @@ export class Client extends DJSClient {
         for (const file of commandFiles) {
             const command = require(`../commands/${file}`).default as Command ?? require(`../commands/${file}`) as Command;
 
-            this.commands.set(command.name, command);
+            this.commands.set(command.name.toLowerCase(), command);
 
             console.log(`BOT -> Registered Command: ${command.name}`);
         };
